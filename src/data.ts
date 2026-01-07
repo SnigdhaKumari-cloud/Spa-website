@@ -131,10 +131,10 @@ export const coreValues: CoreValue[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-    { name: 'Sarah Williams', role: 'Lead Massage Therapist', exp: '8 years', avatar: 'https://randomuser.me/api/portraits/women/45.jpg' },
-    { name: 'Michael Chen', role: 'Senior Esthetician', exp: '10 years', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
-    { name: 'Emily Rodriguez', role: 'Nail Artist', exp: '6 years', avatar: 'https://randomuser.me/api/portraits/women/68.jpg' },
-    { name: 'David Kim', role: 'Body Treatment Specialist', exp: '7 years', avatar: 'https://randomuser.me/api/portraits/men/75.jpg' },
+    { name: 'Sarah Williams', role: 'Lead Massage Therapist', exp: '8 years', avatar: 'https://randomuser.me/api/portraits/women/45.jpg', bio: 'Specializing in deep tissue and hot stone therapy for chronic pain relief.' },
+    { name: 'Michael Chen', role: 'Senior Esthetician', exp: '10 years', avatar: 'https://randomuser.me/api/portraits/men/32.jpg', bio: 'Expert in advanced anti-aging treatments and personalized skincare routines.' },
+    { name: 'Emily Rodriguez', role: 'Nail Artist', exp: '6 years', avatar: 'https://randomuser.me/api/portraits/women/68.jpg', bio: 'Creative specialist in luxury nail art and therapeutic hand/foot care.' },
+    { name: 'David Kim', role: 'Body Treatment Specialist', exp: '7 years', avatar: 'https://randomuser.me/api/portraits/men/75.jpg', bio: 'Focused on detoxifying wraps and holistic body renewal treatments.' },
 ];
 
 export const certifications: Certification[] = [
@@ -147,11 +147,32 @@ export const certifications: Certification[] = [
 
 // ===== CONTACT PAGE DATA =====
 export const faqData: FAQ[] = [
-    { q: 'What should I wear?', a: 'We provide robes and slippers. Wear comfortable clothing.' },
-    { q: 'How early should I arrive?', a: 'Please arrive 15 minutes before your appointment.' },
-    { q: 'What is the cancellation policy?', a: '24-hour notice required for cancellations.' },
-    { q: 'Do you offer gift cards?', a: 'Yes! Available in any amount from $50 to $1,000.' },
+    { q: 'What should I wear during my visit?', a: 'We provide soft robes and comfortable slippers upon arrival. For most treatments, you will be professionally draped to ensure your privacy and comfort. Choose whatever makes you feel most relaxed.' },
+    { q: 'How early should I arrive for my appointment?', a: 'We recommend arriving 15 to 20 minutes before your scheduled treatment. This allows you to check in, complete any necessary intake forms, and enjoy a complimentary herbal tea in our relaxation lounge.' },
+    { q: 'What is your cancellation and rescheduling policy?', a: 'As we reserve time specifically for you, we require a 24-hour notice for cancellations or rescheduling. Cancellations with less than 24 hours notice may be subject to a 50% service charge.' },
+    { q: 'Do you offer group bookings or spa parties?', a: 'Absolutely! We love hosting bridal showers, birthdays, and corporate retreats. Please contact our events coordinator at least 4 weeks in advance for groups of 4 or more.' },
+    { q: 'Are gift cards available for purchase?', a: 'Yes, we offer both physical and digital gift cards. They can be purchased for specific treatments or for a monetary amount, and they never expire.' },
 ];
+
+export const galleryImages = [
+    { url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80', title: 'Serene Massage Room' },
+    { url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80', title: 'Luxury Hydration' },
+    { url: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=800&q=80', title: 'Aromatherapy Sanctuary' },
+    { url: 'https://images.unsplash.com/photo-1600334129128-685c4582f98d?auto=format&fit=crop&w=800&q=80', title: 'Zen Relaxation Lounge' },
+    { url: 'https://images.unsplash.com/photo-1519735817352-ad92662ec8b6?auto=format&fit=crop&w=800&q=80', title: 'Premium Skincare' },
+    { url: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80', title: 'Holistic Welness' }
+];
+
+export const locationData = {
+    address: '123 Tranquility Lane, Zen District, New York, NY 10001',
+    phone: '(555) 737-3648',
+    email: 'hello@serenityspa.com',
+    hours: [
+        { days: 'Monday - Friday', time: '09:00 AM - 08:00 PM' },
+        { days: 'Saturday', time: '10:00 AM - 06:00 PM' },
+        { days: 'Sunday', time: '11:00 AM - 05:00 PM' }
+    ]
+};
 
 export const serviceOptions: ServiceOption[] = [
     { value: '', label: 'Select a service' },

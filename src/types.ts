@@ -58,6 +58,7 @@ export interface TeamMember {
     role: string;
     exp: string;
     avatar: string;
+    bio?: string;
 }
 
 export interface Certification {
