@@ -154,26 +154,6 @@ export const faqData: FAQ[] = [
     { q: 'Are gift cards available for purchase?', a: 'Yes, we offer both physical and digital gift cards. They can be purchased for specific treatments or for a monetary amount, and they never expire.' },
 ];
 
-export const galleryImages = [
-    { url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80', title: 'Serene Massage Room' },
-    { url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80', title: 'Luxury Hydration' },
-    { url: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=800&q=80', title: 'Aromatherapy Sanctuary' },
-    { url: 'https://images.unsplash.com/photo-1600334129128-685c4582f98d?auto=format&fit=crop&w=800&q=80', title: 'Zen Relaxation Lounge' },
-    { url: 'https://images.unsplash.com/photo-1519735817352-ad92662ec8b6?auto=format&fit=crop&w=800&q=80', title: 'Premium Skincare' },
-    { url: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80', title: 'Holistic Welness' }
-];
-
-export const locationData = {
-    address: '123 Tranquility Lane, Zen District, New York, NY 10001',
-    phone: '(555) 737-3648',
-    email: 'hello@serenityspa.com',
-    hours: [
-        { days: 'Monday - Friday', time: '09:00 AM - 08:00 PM' },
-        { days: 'Saturday', time: '10:00 AM - 06:00 PM' },
-        { days: 'Sunday', time: '11:00 AM - 05:00 PM' }
-    ]
-};
-
 export const serviceOptions: ServiceOption[] = [
     { value: '', label: 'Select a service' },
     { value: 'massage', label: 'Massage Therapy' },
@@ -224,3 +204,38 @@ export const spaPackages: SpaPackage[] = [
         ]
     }
 ];
+
+export const megaMenuData = {
+    services: [
+        {
+            title: 'Massage',
+            image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80',
+            link: '/services/massage',
+            items: ['Swedish Massage', 'Deep Tissue', 'Hot Stone', 'Couples Massage']
+        },
+        {
+            title: 'Facials',
+            image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80',
+            link: '/services/facial',
+            items: ['Classic Facial', 'Anti-Aging', 'Hydrating', 'Brightening']
+        },
+        {
+            title: 'Toning',
+            image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=1200&q=80',
+            link: '/services/body',
+            items: ['Body Scrub', 'Detox Wrap', 'Cellulite Slimming', 'Skin Firming']
+        },
+        {
+            title: 'Injectables',
+            image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
+            link: '/services/facial',
+            items: ['Botox', 'Dermal Fillers', 'Lip Enhancement', 'Full Face Rejuvenation']
+        },
+        {
+            title: 'Hair Removal',
+            image: 'https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1200&q=80',
+            link: '/services/body',
+            items: ['Full Body Wax', 'Laser Hair Removal', 'Bikini Wax', 'Facial Waxing']
+        }
+    ]
+};

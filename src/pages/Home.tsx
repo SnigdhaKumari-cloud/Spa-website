@@ -7,9 +7,7 @@ import PackagesSection from '../components/PackagesSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import PhilosophySection from '../components/PhilosophySection';
 import TherapistsSection from '../components/TherapistsSection';
-import GallerySection from '../components/GallerySection';
 import FAQSection from '../components/FAQSection';
-import LocationSection from '../components/LocationSection';
 import { JSX } from 'react';
 
 export default function Home(): JSX.Element {
@@ -90,7 +88,7 @@ export default function Home(): JSX.Element {
             {/* Packages Section */}
             <PackagesSection />
 
-            <GallerySection />
+
 
             {/* Testimonials */}
             <section className="section testimonials" id="testimonials">
@@ -112,7 +110,7 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <LocationSection />
+
 
             {/* Newsletter */}
             <section className="newsletter">
