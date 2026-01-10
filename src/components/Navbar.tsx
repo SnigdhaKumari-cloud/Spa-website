@@ -74,6 +74,7 @@ export default function Navbar(): JSX.Element {
                     </li>
                     <li><Link to="/about" className="nav-link">About</Link></li>
                     <li><Link to="/gallery" className="nav-link">Gallery</Link></li>
+                    <li><Link to="/spa-policies" className="nav-link">Spa Policies</Link></li>
                     <li><Link to="/contact" className="nav-link">Contact</Link></li>
                     <div className="nav-cta">
                         <Link to="/booking" className="btn btn-secondary btn-sm">Book Now</Link>

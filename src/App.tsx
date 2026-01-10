@@ -10,6 +10,7 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
+import SpaPolicies from './pages/SpaPolicies';
 import './styles/main.css';
 import './styles/components.css';
 
@@ -60,6 +61,7 @@ function App(): JSX.Element {
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/booking" element={<Booking />} />
+                <Route path="/spa-policies" element={<SpaPolicies />} />
             </Routes>
             <Footer />
             <LiveChat />
