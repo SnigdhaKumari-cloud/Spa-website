@@ -2781,3 +2781,537 @@ textarea.form-control {
         grid-column: span 1;
     }
 }
+
+/* ===== GIFT CARDS ===== */
+.gift-cards-hero {
+    padding: 180px 0 80px;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gift-cards-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.gift-cards-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gift-cards-hero h1 {
+    color: white;
+}
+
+.gift-cards-hero .subtitle {
+    color: var(--color-secondary);
+}
+
+.gift-card-builder {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gift-card-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-3xl);
+}
+
+.gift-card-steps .step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text-muted);
+}
+
+.gift-card-steps .step.active {
+    color: var(--color-primary);
+}
+
+.gift-card-steps .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    background: var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+.gift-card-steps .step.active .step-number {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.gift-card-steps .step-line {
+    width: 60px;
+    height: 2px;
+    background: var(--color-border);
+}
+
+.gift-card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.gift-card-options {
+    background: var(--color-surface);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-type-toggle {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    background: var(--color-background);
+    padding: var(--space-xs);
+    border-radius: var(--radius-lg);
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: var(--space-md);
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-text-light);
+    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.toggle-btn.active {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.amount-btn {
+    padding: var(--space-lg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.amount-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--color-accent-light);
+}
+
+.amount-btn.active {
+    border-color: var(--color-primary);
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--gradient-gold);
+    color: var(--color-text);
+    font-size: var(--text-xs);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+}
+
+.custom-amount {
+    margin-top: var(--space-lg);
+}
+
+.custom-amount label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+}
+
+.custom-amount-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.custom-amount-input .currency {
+    padding: var(--space-md);
+    background: var(--color-background);
+    color: var(--color-text-light);
+    font-size: var(--text-lg);
+}
+
+.custom-amount-input input {
+    flex: 1;
+    border: none;
+    padding: var(--space-md);
+    font-size: var(--text-lg);
+    outline: none;
+}
+
+.package-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.package-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.package-option:hover {
+    border-color: var(--color-primary);
+}
+
+.package-option.active {
+    border-color: var(--color-primary);
+    background: var(--color-accent-light);
+}
+
+.package-icon {
+    font-size: var(--text-3xl);
+}
+
+.package-info {
+    flex: 1;
+}
+
+.package-info h4 {
+    margin: 0 0 var(--space-xs);
+}
+
+.package-info p {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+}
+
+.package-price {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.featured-tag {
+    position: absolute;
+    top: -8px;
+    right: var(--space-md);
+    background: var(--gradient-gold);
+    color: var(--color-text);
+    font-size: var(--text-xs);
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+}
+
+.delivery-toggle {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.delivery-btn {
+    flex: 1;
+    padding: var(--space-lg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: left;
+}
+
+.delivery-btn i {
+    font-size: var(--text-xl);
+    color: var(--color-text-light);
+}
+
+.delivery-btn div {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-btn strong {
+    color: var(--color-text);
+}
+
+.delivery-btn span {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+}
+
+.delivery-btn:hover {
+    border-color: var(--color-primary);
+}
+
+.delivery-btn.active {
+    border-color: var(--color-primary);
+    background: var(--color-accent-light);
+}
+
+.delivery-btn.active i {
+    color: var(--color-primary);
+}
+
+.gift-card-options .form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.gift-card-options .form-group label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.gift-card-options .form-group input,
+.gift-card-options .form-group textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    transition: var(--transition-base);
+}
+
+.gift-card-options .form-group input:focus,
+.gift-card-options .form-group textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.char-count {
+    display: block;
+    text-align: right;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+}
+
+.step-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.step-buttons .btn {
+    flex: 1;
+}
+
+.order-summary {
+    background: var(--color-background);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.order-summary h4 {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    color: var(--color-text-light);
+}
+
+.summary-row.total {
+    border-top: 2px solid var(--color-border);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-md);
+    font-weight: 600;
+    font-size: var(--text-lg);
+    color: var(--color-text);
+}
+
+/* Gift Card Preview */
+.gift-card-preview {
+    position: sticky;
+    top: 120px;
+}
+
+.preview-label {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gift-card {
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1.6 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.gift-card-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.gift-card-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.gift-card-logo i {
+    font-size: var(--text-2xl);
+    color: var(--color-secondary);
+}
+
+.gift-card-logo span {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+}
+
+.gift-card-amount {
+    font-family: var(--font-heading);
+    font-size: var(--text-6xl);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.gift-card-package {
+    font-size: var(--text-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.gift-card-recipient {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+    margin-bottom: var(--space-sm);
+}
+
+.gift-card-message {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: var(--text-base);
+    opacity: 0.85;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.gift-card-footer {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: var(--space-xl);
+    right: var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    opacity: 0.7;
+}
+
+.gift-card-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .gift-card-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gift-card-preview {
+        position: relative;
+        top: 0;
+        order: -1;
+    }
+
+    .amount-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gift-card-steps {
+        flex-wrap: wrap;
+    }
+
+    .gift-card-steps .step-line {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery-toggle {
+        flex-direction: column;
+    }
+
+    .step-buttons {
+        flex-direction: column;
+    }
+
+    .gift-card-amount {
+        font-size: var(--text-4xl);
+    }
+}

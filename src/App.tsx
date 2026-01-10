@@ -11,6 +11,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import SpaPolicies from './pages/SpaPolicies';
+import GiftCards from './pages/GiftCards';
 import './styles/main.css';
 import './styles/components.css';
 
@@ -62,6 +63,7 @@ function App(): JSX.Element {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/booking" element={<Booking />} />
                 <Route path="/spa-policies" element={<SpaPolicies />} />
+                <Route path="/gift-cards" element={<GiftCards />} />
             </Routes>
             <Footer />
             <LiveChat />
