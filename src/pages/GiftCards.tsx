@@ -1,6 +1,6 @@
 import { JSX, useState } from 'react';
 import { spaPackages } from '../data';
-import sageMarbleBg from '../assets/images/sage_marble_giftcard.png';
+import sageMarbleBgFinal from '../assets/images/sage_marble_giftcard_final.jpg';
 
 interface GiftCardAmount {
     value: number;
@@ -377,55 +377,20 @@ export default function GiftCards(): JSX.Element {
                             <div className="gift-card-preview reveal">
                                 <div className="preview-label">Card Preview</div>
                                 <div className="gift-card" style={{
-                                    backgroundImage: `url(${sageMarbleBg})`,
-                                    backgroundSize: '300%', // Optimized zoom to hide all baked-in text
-                                    backgroundPosition: '85% 15%', // Optimized focus on clean botanical corner
-                                    border: '1px solid rgba(26, 95, 74, 0.1)'
+                                    backgroundImage: `url(${sageMarbleBgFinal})`,
+                                    backgroundSize: 'contain',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundColor: 'transparent',
+                                    boxShadow: 'none',
+                                    border: 'none',
+                                    padding: 0
                                 }}>
-                                    <div className="gift-card-inner" style={{ color: '#1a5f4a', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: 'var(--space-xl)' }}>
-                                        <div className="gift-card-amount" style={{
-                                            position: 'relative',
-                                            color: '#1a5f4a',
-                                            textShadow: '0 2px 4px rgba(255,255,255,0.5)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            gap: '8px',
-                                            margin: 'var(--space-md) 0'
-                                        }}>
-                                            <span style={{ fontSize: '0.5em', marginTop: '-0.5em', color: '#c5a059' }}>$</span>
-                                            {getFinalAmount()}
-                                        </div>
-                                        {cardType === 'package' && (
-                                            <div className="gift-card-package" style={{ color: '#c5a059', fontWeight: '600', marginBottom: 'var(--space-sm)' }}>
-                                                {selectedPackage} Package
-                                            </div>
-                                        )}
-                                        <div className="gift-card-recipient" style={{ opacity: 1, fontWeight: '500', fontSize: 'var(--text-md)', textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
-                                            {recipientName ? `For: ${recipientName}` : 'For: Your Special Someone'}
-                                        </div>
-                                        {message && (
-                                            <div className="gift-card-message" style={{ color: '#1a5f4a', opacity: 0.9, fontSize: 'var(--text-sm)', background: 'rgba(255,255,255,0.3)', backdropFilter: 'blur(4px)', padding: '6px 12px', borderRadius: '8px', marginTop: '8px', maxWidth: '80%' }}>
-                                                "{message}"
-                                            </div>
-                                        )}
-                                        <div className="gift-card-footer" style={{
-                                            position: 'absolute',
-                                            bottom: 'var(--space-xl)',
-                                            left: 'var(--space-2xl)',
-                                            right: 'var(--space-2xl)',
-                                            borderTop: '1px solid rgba(26, 95, 74, 0.2)',
-                                            paddingTop: 'var(--space-sm)',
-                                            opacity: 1,
-                                            display: 'flex',
-                                            justifyContent: 'space-between'
-                                        }}>
-                                            <span style={{ color: '#1a5f4a', fontWeight: '500' }}>Gift Card</span>
-                                            <span style={{ color: '#c5a059', fontWeight: '600' }}>Never Expires</span>
-                                        </div>
+                                    {/* Substantially simplified to match the user's "same nothing else" request */}
+                                    <div className="gift-card-inner" style={{ opacity: 0 }}>
+                                        {/* Hidden elements to maintain accessibility or structure if needed */}
+                                        ${getFinalAmount()}
                                     </div>
-                                    {/* Remove or Hide Pattern for Marble Background */}
-                                    {/* <div className="gift-card-pattern"></div> */}
                                 </div>
                             </div>
                         </div>
