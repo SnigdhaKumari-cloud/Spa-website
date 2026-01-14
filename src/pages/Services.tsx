@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import { serviceCategories } from '../data';
@@ -18,7 +19,9 @@ export default function Services(): JSX.Element {
             {Object.entries(serviceCategories).map(([key, category], index) => (
                 <section key={key} className="section" style={{ background: index % 2 ? 'var(--color-accent-light)' : 'white' }}>
                     <div className="container">
-                        <SectionHeader subtitle={category.subtitle} title={category.title} description={category.description} />
+                        <div className="reveal">
+                            <SectionHeader subtitle={category.subtitle} title={category.title} description={category.description} />
+                        </div>
                         <div className="grid grid-3">
                             {category.services.slice(0, 3).map((service, i) => (
                                 <div key={i} className={`card reveal ${service.featured ? 'featured' : ''}`}>

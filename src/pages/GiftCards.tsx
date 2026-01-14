@@ -75,16 +75,10 @@ export default function GiftCards(): JSX.Element {
             <section className="gift-cards-hero">
                 <div className="container">
                     <span className="subtitle">The Perfect Present</span>
-                    <h1 style={{ marginTop: 'var(--space-sm)' }}>Gift Cards</h1>
-                    <p style={{
-                        marginTop: 'var(--space-md)',
-                        color: 'var(--color-text-light)',
-                        maxWidth: '600px',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        fontSize: 'var(--text-lg)'
-                    }}>
-                        Give the gift of relaxation and rejuvenation. Perfect for birthdays, holidays, or just because.
+                    <h1>Gift Cards</h1>
+                    <p className="hero-description reveal">
+                        Give the gift of <span className="text-highlight">relaxation</span> and <span className="text-highlight">rejuvenation</span>.
+                        Designed for birthdays, holidays, or those special moments that deserve a little luxury.
                     </p>
                 </div>
             </section>
@@ -109,7 +103,12 @@ export default function GiftCards(): JSX.Element {
                                 }}>
                                     <i className={`fas ${feature.icon}`}></i>
                                 </div>
-                                <h4 style={{ marginBottom: 'var(--space-xs)' }}>{feature.title}</h4>
+                                <h4 style={{
+                                    marginBottom: 'var(--space-xs)',
+                                    fontFamily: 'var(--font-accent)',
+                                    fontSize: 'var(--text-2xl)',
+                                    fontStyle: 'italic'
+                                }}>{feature.title}</h4>
                                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--text-sm)' }}>{feature.desc}</p>
                             </div>
                         ))}

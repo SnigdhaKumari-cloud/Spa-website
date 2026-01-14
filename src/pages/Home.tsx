@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
             <PhilosophySection />
 
             {/* Stats Section */}
-            <section className="stats-section">
+            <section className="stats-section reveal">
                 <div className="container">
                     <div className="stats-grid">
                         {stats.map((stat, i) => {
@@ -101,7 +101,7 @@ export default function Home(): JSX.Element {
             <FAQSection />
 
             {/* As Featured In */}
-            <section className="as-seen-on">
+            <section className="as-seen-on reveal">
                 <h4>As Featured In</h4>
                 <div className="media-logos">
                     {mediaFeatures.map((name, i) => (
