@@ -374,24 +374,20 @@ export default function GiftCards(): JSX.Element {
                             </div>
 
                             {/* Right Side - Card Preview */}
-                            <div className="gift-card-preview reveal">
-                                <div className="preview-label">Card Preview</div>
-                                <div className="gift-card" style={{
-                                    backgroundImage: `url(${sageMarbleBgFinal})`,
-                                    backgroundSize: 'contain',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundColor: 'transparent',
-                                    boxShadow: 'none',
-                                    border: 'none',
-                                    padding: 0
-                                }}>
-                                    {/* Substantially simplified to match the user's "same nothing else" request */}
-                                    <div className="gift-card-inner" style={{ opacity: 0 }}>
-                                        {/* Hidden elements to maintain accessibility or structure if needed */}
-                                        ${getFinalAmount()}
-                                    </div>
-                                </div>
+                            <div className="gift-card-preview reveal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <img
+                                    src={sageMarbleBgFinal}
+                                    alt="Gift Card Preview"
+                                    style={{
+                                        width: '100%',
+                                        maxWidth: '600px',
+                                        height: 'auto',
+                                        borderRadius: 'var(--radius-2xl)',
+                                        boxShadow: 'var(--shadow-xl)'
+                                    }}
+                                />
+                                {/* Hidden for logic/accessibility */}
+                                <div style={{ display: 'none' }}>${getFinalAmount()}</div>
                             </div>
                         </div>
                     </div>
