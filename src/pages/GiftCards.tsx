@@ -1,5 +1,6 @@
 import { JSX, useState } from 'react';
 import { spaPackages } from '../data';
+import sageMarbleBg from '../assets/images/sage_marble_giftcard.png';
 
 interface GiftCardAmount {
     value: number;
@@ -375,34 +376,48 @@ export default function GiftCards(): JSX.Element {
                             {/* Right Side - Card Preview */}
                             <div className="gift-card-preview reveal">
                                 <div className="preview-label">Card Preview</div>
-                                <div className="gift-card">
-                                    <div className="gift-card-inner">
+                                <div className="gift-card" style={{
+                                    backgroundImage: `url(${sageMarbleBg})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    border: '1px solid rgba(26, 95, 74, 0.1)'
+                                }}>
+                                    <div className="gift-card-inner" style={{ color: '#1a5f4a' }}>
                                         <div className="gift-card-logo">
-                                            <i className="fas fa-spa"></i>
-                                            <span>Serenity Spa</span>
+                                            <i className="fas fa-spa" style={{ color: '#c5a059' }}></i>
+                                            <span style={{ color: '#1a5f4a' }}>Serenity Spa</span>
                                         </div>
-                                        <div className="gift-card-amount">
-                                            ${getFinalAmount()}
+                                        <div className="gift-card-amount" style={{
+                                            color: '#1a5f4a',
+                                            textShadow: 'none',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            gap: '4px'
+                                        }}>
+                                            <span style={{ fontSize: '0.5em', marginTop: '-0.5em', color: '#c5a059' }}>$</span>
+                                            {getFinalAmount()}
                                         </div>
                                         {cardType === 'package' && (
-                                            <div className="gift-card-package">
+                                            <div className="gift-card-package" style={{ color: '#c5a059', fontWeight: '600' }}>
                                                 {selectedPackage} Package
                                             </div>
                                         )}
-                                        <div className="gift-card-recipient">
+                                        <div className="gift-card-recipient" style={{ opacity: 1, fontWeight: '500' }}>
                                             {recipientName ? `For: ${recipientName}` : 'For: Your Special Someone'}
                                         </div>
                                         {message && (
-                                            <div className="gift-card-message">
+                                            <div className="gift-card-message" style={{ color: '#1a5f4a', opacity: 0.9 }}>
                                                 "{message}"
                                             </div>
                                         )}
-                                        <div className="gift-card-footer">
-                                            <span>Gift Card</span>
-                                            <span>Never Expires</span>
+                                        <div className="gift-card-footer" style={{ borderTop: '1px solid rgba(26, 95, 74, 0.1)', paddingTop: 'var(--space-md)', opacity: 1 }}>
+                                            <span style={{ color: '#1a5f4a', fontWeight: '500' }}>Gift Card</span>
+                                            <span style={{ color: '#c5a059', fontWeight: '600' }}>Never Expires</span>
                                         </div>
                                     </div>
-                                    <div className="gift-card-pattern"></div>
+                                    {/* Remove or Hide Pattern for Marble Background */}
+                                    {/* <div className="gift-card-pattern"></div> */}
                                 </div>
                             </div>
                         </div>
