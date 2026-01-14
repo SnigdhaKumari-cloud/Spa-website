@@ -27,6 +27,9 @@ export default function Footer(): JSX.Element {
                             <li><Link to="/services/facial">Facial Treatments</Link></li>
                             <li><Link to="/services/body">Body Treatments</Link></li>
                             <li><Link to="/services/nails">Nail Services</Link></li>
+                            <li><Link to="/services/waxing">Waxing</Link></li>
+                            <li><Link to="/services/tinting">Tinting & Lashes</Link></li>
+                            <li><Link to="/services/spraytan">Spray Tan</Link></li>
                         </ul>
                     </div>
 
