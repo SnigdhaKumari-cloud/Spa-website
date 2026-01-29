@@ -2240,10 +2240,52 @@ textarea.form-control {
 }
 
 /* ===== PHILOSOPHY SECTION ===== */
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.philosophy-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.philosophy-banner-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.philosophy-banner-image:hover {
+    transform: scale(1.02);
+}
+
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-banner-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .value-card {

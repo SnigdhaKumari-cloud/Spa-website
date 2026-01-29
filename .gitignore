@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Backup and test folders
+Fresh-App
+test_folder
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
