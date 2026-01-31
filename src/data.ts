@@ -6,7 +6,12 @@ import {
     massageImg,
     facialImg,
     bodyImg,
-    nailImg
+    nailImg,
+    silverMembershipImg,
+    goldMembershipImg,
+    platinumMembershipImg,
+    heroImg,
+    receptionImg
 } from './assets/images';
 
 import type {
@@ -268,7 +273,7 @@ export const membershipPackages: SpaPackage[] = [
         tagline: 'Perfect for those who like to take care of themselves!',
         price: 95,
         icon: 'leaf-outline',
-        image: '/src/assets/images/silver_membership.png',
+        image: silverMembershipImg,
         savings: 'average savings of 33%',
         featured: false,
         features: [
@@ -282,7 +287,7 @@ export const membershipPackages: SpaPackage[] = [
         tagline: 'Perfect for the ones who need to relax and rejuvenate!',
         price: 119,
         icon: 'sparkles-outline',
-        image: '/src/assets/images/gold_membership.png',
+        image: goldMembershipImg,
         savings: 'average savings of 33%',
         featured: true,
         features: [
@@ -294,7 +299,7 @@ export const membershipPackages: SpaPackage[] = [
         tagline: 'For those who need to be at the top of their game always!',
         price: 169,
         icon: 'diamond-outline',
-        image: '/src/assets/images/platinum_membership.png',
+        image: platinumMembershipImg,
         savings: 'average savings of 33%',
         featured: false,
         features: [
@@ -313,31 +318,31 @@ export const megaMenuData = {
     services: [
         {
             title: 'Spa Experiences',
-            image: '/src/assets/images/spa_hero_bg_1767761679673.png',
+            image: heroImg,
             link: '/services/spa',
             items: ['Day of Bliss', 'Couples Retreat', 'Bridal Party', 'Corporate Wellness']
         },
         {
             title: 'Massage',
-            image: '/src/assets/images/massage_service_1767761695650.png',
+            image: massageImg,
             link: '/services/massage',
             items: ['Swedish Massage', 'Deep Tissue', 'Hot Stone', 'Four Hands']
         },
         {
             title: 'Facials',
-            image: '/src/assets/images/facial_service_1767761710982.png',
+            image: facialImg,
             link: '/services/facial',
             items: ['European Facial', 'Anti-Aging', 'Microneedling', 'Chemical Peel']
         },
         {
             title: 'Body Treatments',
-            image: '/src/assets/images/body_treatment_1767761739285.png',
+            image: bodyImg,
             link: '/services/body',
             items: ['Body Polish', 'Detox Wrap', 'CBD Treatment', 'Aromatherapy']
         },
         {
             title: 'Nails',
-            image: '/src/assets/images/nail_service_1767761754565.png',
+            image: nailImg,
             link: '/services/nails',
             items: ['Gel Manicure', 'Spa Pedicure', 'French Tip', 'Mani-Pedi Combo']
         }
