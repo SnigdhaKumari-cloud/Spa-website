@@ -73,7 +73,7 @@ export default function Navbar(): JSX.Element {
                         <MegaMenu isOpen={megaMenuOpen} onClose={() => setMegaMenuOpen(false)} />
                     </li>
                     <li><Link to="/about" className="nav-link">About Us</Link></li>
-                    <li><Link to="/#packages" className="nav-link">Membership</Link></li>
+
                     <li><Link to="/gift-cards" className="nav-link">Gift Cards</Link></li>
 
                     <li><Link to="/contact" className="nav-link">Contact</Link></li>
