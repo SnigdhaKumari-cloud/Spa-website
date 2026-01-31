@@ -106,3 +106,5 @@ Edit `src/data.js` to update:
 ## 📝 License
 
 MIT License - feel free to use for your own projects!
+
+<!-- Trigger deployment: 2026-01-31 -->
