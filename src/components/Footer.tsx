@@ -23,13 +23,12 @@ export default function Footer(): JSX.Element {
                     <div className="footer-col">
                         <h4 className="footer-title">Services</h4>
                         <ul className="footer-links">
+                            <li><Link to="/services/spa">Spa Experiences</Link></li>
+
                             <li><Link to="/services/massage">Massage Therapy</Link></li>
                             <li><Link to="/services/facial">Facial Treatments</Link></li>
                             <li><Link to="/services/body">Body Treatments</Link></li>
                             <li><Link to="/services/nails">Nail Services</Link></li>
-                            <li><Link to="/services/waxing">Waxing</Link></li>
-                            <li><Link to="/services/tinting">Tinting & Lashes</Link></li>
-                            <li><Link to="/services/spraytan">Spray Tan</Link></li>
                         </ul>
                     </div>
 
@@ -59,6 +58,7 @@ export default function Footer(): JSX.Element {
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
                         <a href="#">Cancellation Policy</a>
+                        <Link to="/spa-policies">Spa Policies</Link>
                     </div>
                 </div>
             </div>

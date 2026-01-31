@@ -48,7 +48,7 @@ export interface Testimonial {
 
 // About Page Types
 export interface CoreValue {
-    icon: string;
+    image: string;
     title: string;
     desc: string;
 }
@@ -98,6 +98,8 @@ export interface SpaPackage {
     tagline: string;
     price: number;
     icon: string;
+    image?: string;
+    savings?: string;
     featured: boolean;
     features: string[];
 }

@@ -29,7 +29,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Healing Touch',
         description: 'Experience therapeutic massage with our certified therapists using European techniques.',
         image: massageImg,
-        icon: 'fa-hands',
+        icon: 'hand-right-outline',
         services: [
             { name: 'Swedish Massage', desc: 'Classic European technique to relieve stress', price: 89, duration: '60 min' },
             { name: 'Deep Tissue Massage', desc: 'Targets deep muscle tension with forearms and elbows', price: 109, duration: '60 min' },
@@ -48,7 +48,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Radiant Skin',
         description: 'Advanced skincare treatments customized for your exact complexion.',
         image: facialImg,
-        icon: 'fa-face-smile',
+        icon: 'sparkles-outline',
         services: [
             { name: 'Classic Facial', desc: 'Deep cleansing and hydration', price: 120, duration: '60 min' },
             { name: 'Anti-Aging Facial', desc: 'Vitamins and minerals stimulate collagen production', price: 180, duration: '75 min', featured: true },
@@ -69,7 +69,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Total Renewal',
         description: 'Luxurious treatments for complete body wellness and detoxification.',
         image: bodyImg,
-        icon: 'fa-leaf',
+        icon: 'leaf-outline',
         services: [
             { name: 'Exfoliating Body Polish', desc: 'Sea salts sweep away dead cells for soft skin', price: 150, duration: '60 min' },
             { name: 'Detox Body Wrap', desc: 'Seaweed mud promotes detoxification and improves skin texture', price: 180, duration: '75 min', featured: true },
@@ -86,7 +86,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Beautiful Nails',
         description: 'Premium manicures and pedicures for perfectly polished hands and feet.',
         image: nailImg,
-        icon: 'fa-hand-sparkles',
+        icon: 'color-palette-outline',
         services: [
             { name: 'Classic Manicure', desc: 'Nail shaping, cuticle care, polish', price: 45, duration: '30 min' },
             { name: 'Gel Manicure', desc: 'Long-lasting chip-free finish', price: 65, duration: '45 min', featured: true },
@@ -107,7 +107,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Smooth Skin',
         description: 'Professional hair removal services for silky smooth skin.',
         image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80',
-        icon: 'fa-spa',
+        icon: 'flower-outline',
         services: [
             { name: 'Eyebrow Wax', desc: 'Shape and define your brows', price: 20, duration: '15 min' },
             { name: 'Upper Lip', desc: 'Gentle facial hair removal', price: 15, duration: '10 min' },
@@ -128,7 +128,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Eye Enhancement',
         description: 'Professional brow and lash services for stunning eyes.',
         image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
-        icon: 'fa-eye',
+        icon: 'eye-outline',
         services: [
             { name: 'Eyebrow Tint', desc: 'Define and darken your brows', price: 25, duration: '20 min' },
             { name: 'Eyelash Tint', desc: 'Darken lashes for a mascara-free look', price: 30, duration: '25 min' },
@@ -145,7 +145,7 @@ export const serviceCategories: ServiceCategories = {
         subtitle: 'Sun-Kissed Glow',
         description: 'Professional airbrush spray tanning for a natural, healthy glow.',
         image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
-        icon: 'fa-sun',
+        icon: 'sunny-outline',
         services: [
             { name: 'Original Spray Tan', desc: 'Rose-brown natural-looking tan, 10-12 hour setting', price: 45, duration: '30 min' },
             { name: 'Rapid Spray Tan', desc: 'Mocha and honey tones, 1-4 hour quick set', price: 55, duration: '30 min', featured: true },
@@ -154,18 +154,38 @@ export const serviceCategories: ServiceCategories = {
             { name: 'Organic Serum Add-On', desc: 'Acai, coconut, lavender or green tea boost', price: 15, duration: '5 min' },
             { name: 'Tan Extender Treatment', desc: 'Hydrating treatment to extend tan life', price: 25, duration: '15 min' },
         ]
+    },
+    spa: {
+        title: 'Spa Experiences',
+        subtitle: 'Complete Wellness',
+        description: 'Immersive spa experiences combining multiple treatments for total relaxation and rejuvenation.',
+        image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80',
+        icon: 'water-outline',
+        services: [
+            { name: 'Day of Bliss', desc: 'Half-day retreat with massage, facial, and lunch', price: 299, duration: '4 hours', featured: true },
+            { name: 'Couples Retreat', desc: 'Side-by-side massage and spa treatments for two', price: 399, duration: '3 hours' },
+            { name: 'Relaxation Lounge Access', desc: 'Enjoy our sauna, steam room, and relaxation areas', price: 49, duration: '2 hours' },
+            { name: 'Aromatherapy Journey', desc: 'Custom essential oil experience with massage', price: 159, duration: '90 min' },
+            { name: 'Wellness Consultation', desc: 'Personalized wellness plan with our experts', price: 75, duration: '45 min' },
+            { name: 'Bridal Party Package', desc: 'Group spa day with champagne and treatments', price: 199, duration: '3 hours' },
+            { name: 'Corporate Wellness', desc: 'Team building spa experience', price: 149, duration: '2 hours' },
+            { name: 'Monthly Membership', desc: 'Unlimited lounge access + discounted treatments', price: 99, duration: 'Monthly' },
+        ]
     }
 };
 
 // ===== HOME PAGE DATA =====
-export const homeServices: HomeService[] = Object.entries(serviceCategories).map(([key, cat]) => ({
-    title: cat.title,
-    desc: cat.description,
-    price: Math.min(...cat.services.map(s => s.price)),
-    img: cat.image,
-    link: `/services/${key}`,
-    icon: cat.icon
-}));
+export const homeServices: HomeService[] = [
+    ...Object.entries(serviceCategories).map(([key, cat]) => ({
+        title: cat.title,
+        desc: cat.description,
+        price: Math.min(...cat.services.map(s => s.price)),
+        img: cat.image,
+        link: `/services/${key}`,
+        icon: cat.icon
+    })),
+
+];
 
 export const stats: Stat[] = [
     { num: '15+', label: 'Years Experience' },
@@ -199,10 +219,10 @@ export const mediaFeatures: string[] = ['Vogue', 'Elle', 'Today Show', 'NY Times
 
 // ===== ABOUT PAGE DATA =====
 export const coreValues: CoreValue[] = [
-    { icon: '🌿', title: 'Natural', desc: 'Organic, eco-friendly products' },
-    { icon: '💆', title: 'Expertise', desc: 'Certified, experienced therapists' },
-    { icon: '✨', title: 'Excellence', desc: 'Exceptional service always' },
-    { icon: '💕', title: 'Care', desc: 'Your wellness is our priority' },
+    { image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80', title: 'Natural', desc: 'Organic, eco-friendly products' },
+    { image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80', title: 'Expertise', desc: 'Certified, experienced therapists' },
+    { image: 'https://images.unsplash.com/photo-1560066984-138fa6ca6bd6?auto=format&fit=crop&w=600&q=80', title: 'Excellence', desc: 'Exceptional service always' },
+    { image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&w=600&q=80', title: 'Care', desc: 'Your wellness is our priority' },
 ];
 
 export const teamMembers: TeamMember[] = [
@@ -213,11 +233,11 @@ export const teamMembers: TeamMember[] = [
 ];
 
 export const certifications: Certification[] = [
-    { icon: 'fa-user-md', text: 'Licensed Estheticians' },
-    { icon: 'fa-certificate', text: 'Board Certified LMTs' },
-    { icon: 'fa-shield-alt', text: 'Fully Insured' },
-    { icon: 'fa-leaf', text: 'Eco-Certified Products' },
-    { icon: 'fa-award', text: 'ISPA Member' },
+    { icon: 'person-outline', text: 'Licensed Estheticians' },
+    { icon: 'ribbon-outline', text: 'Board Certified LMTs' },
+    { icon: 'shield-checkmark-outline', text: 'Fully Insured' },
+    { icon: 'leaf-outline', text: 'Eco-Certified Products' },
+    { icon: 'trophy-outline', text: 'ISPA Member' },
 ];
 
 // ===== CONTACT PAGE DATA =====
@@ -238,94 +258,88 @@ export const serviceOptions: ServiceOption[] = [
     { value: 'waxing', label: 'Waxing' },
     { value: 'tinting', label: 'Tinting & Lashes' },
     { value: 'spraytan', label: 'Spray Tan' },
+    { value: 'spa', label: 'Spa Experiences' },
     { value: 'package', label: 'Spa Package' },
 ];
 
-export const spaPackages: SpaPackage[] = [
+export const membershipPackages: SpaPackage[] = [
     {
-        name: 'Bliss',
-        tagline: 'Perfect introduction to spa wellness',
-        price: 149,
-        icon: '🌸',
+        name: 'Silver',
+        tagline: 'Perfect for those who like to take care of themselves!',
+        price: 95,
+        icon: 'leaf-outline',
+        image: '/src/assets/images/silver_membership.png',
+        savings: 'average savings of 33%',
         featured: false,
         features: [
-            '60-min Swedish Massage',
-            'Express Facial Treatment',
-            'Aromatherapy Session',
-            'Complimentary Refreshments'
+            '1 x Gel Manicure',
+            '1 x Spa Pedicure',
+            '1 x CHOICE OF: Facial, Massage, or Body Scrub'
         ]
     },
     {
-        name: 'Serenity',
-        tagline: 'Complete mind & body experience',
-        price: 279,
-        icon: '✨',
+        name: 'Gold',
+        tagline: 'Perfect for the ones who need to relax and rejuvenate!',
+        price: 119,
+        icon: 'sparkles-outline',
+        image: '/src/assets/images/gold_membership.png',
+        savings: 'average savings of 33%',
         featured: true,
         features: [
-            '90-min Hot Stone Massage',
-            'Premium Facial Treatment',
-            'Body Scrub & Wrap',
-            'Manicure & Pedicure'
+            '2 x CHOICE OF: Facial, Massage, or Body Scrub'
         ]
     },
     {
-        name: 'Nirvana',
-        tagline: 'Ultimate luxury escape (Half Day)',
-        price: 449,
-        icon: '👑',
+        name: 'Platinum',
+        tagline: 'For those who need to be at the top of their game always!',
+        price: 169,
+        icon: 'diamond-outline',
+        image: '/src/assets/images/platinum_membership.png',
+        savings: 'average savings of 33%',
         featured: false,
         features: [
-            '120-min Signature Massage',
-            'Anti-Aging Facial',
-            'Full Body Treatment',
-            'Gel Manicure & Pedicure'
+            '1 x Gel Manicure',
+            '1 x Gel Pedicure',
+            '2 x Choice OF: Facial, Massage, or Body Scrub',
+            '1 x CHOICE OF: Blow Dry or Men\'s Haircut'
         ]
     }
 ];
 
+// Alias for backward compatibility with booking/giftcard pages
+export const spaPackages = membershipPackages;
+
 export const megaMenuData = {
     services: [
         {
+            title: 'Spa Experiences',
+            image: '/src/assets/images/spa_hero_bg_1767761679673.png',
+            link: '/services/spa',
+            items: ['Day of Bliss', 'Couples Retreat', 'Bridal Party', 'Corporate Wellness']
+        },
+        {
             title: 'Massage',
-            image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80',
+            image: '/src/assets/images/massage_service_1767761695650.png',
             link: '/services/massage',
             items: ['Swedish Massage', 'Deep Tissue', 'Hot Stone', 'Four Hands']
         },
         {
             title: 'Facials',
-            image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80',
+            image: '/src/assets/images/facial_service_1767761710982.png',
             link: '/services/facial',
             items: ['European Facial', 'Anti-Aging', 'Microneedling', 'Chemical Peel']
         },
         {
             title: 'Body Treatments',
-            image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=1200&q=80',
+            image: '/src/assets/images/body_treatment_1767761739285.png',
             link: '/services/body',
             items: ['Body Polish', 'Detox Wrap', 'CBD Treatment', 'Aromatherapy']
         },
         {
             title: 'Nails',
-            image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80',
+            image: '/src/assets/images/nail_service_1767761754565.png',
             link: '/services/nails',
             items: ['Gel Manicure', 'Spa Pedicure', 'French Tip', 'Mani-Pedi Combo']
-        },
-        {
-            title: 'Waxing',
-            image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1200&q=80',
-            link: '/services/waxing',
-            items: ['Brazilian', 'Full Leg', 'Full Face', 'Eyebrows']
-        },
-        {
-            title: 'Tinting & Lashes',
-            image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80',
-            link: '/services/tinting',
-            items: ['Lash Lift', 'Brow Lamination', 'Lash Extensions', 'Tinting']
-        },
-        {
-            title: 'Spray Tan',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
-            link: '/services/spraytan',
-            items: ['Original Tan', 'Rapid Tan', 'Competition Tan', 'Express Tan']
         }
     ]
 };

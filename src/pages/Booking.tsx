@@ -59,7 +59,7 @@ export default function Booking(): JSX.Element {
                                     className={`booking-option-card ${formData.category === key ? 'active' : ''}`}
                                     onClick={() => updateFormData({ category: key, service: '', package: undefined })}
                                 >
-                                    <div className="option-icon"><i className={`fas ${cat.icon}`}></i></div>
+                                    <div className="option-icon"><ion-icon name={cat.icon}></ion-icon></div>
                                     <div className="option-name">{cat.title}</div>
                                 </button>
                             ))}
@@ -67,7 +67,7 @@ export default function Booking(): JSX.Element {
                                 className={`booking-option-card ${formData.category === 'package' ? 'active' : ''}`}
                                 onClick={() => updateFormData({ category: 'package', service: '', package: '' })}
                             >
-                                <div className="option-icon"><i className="fas fa-gift"></i></div>
+                                <div className="option-icon"><ion-icon name="gift-outline"></ion-icon></div>
                                 <div className="option-name">Spa Packages</div>
                             </button>
                         </div>

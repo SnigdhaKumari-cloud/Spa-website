@@ -48,7 +48,7 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps): JSX.Elemen
                 <div className="mega-menu-footer">
                     <div className="mega-menu-footer-buttons">
                         <Link to="/booking" className="btn btn-secondary" onClick={onClose}>Book Now</Link>
-                        <Link to="/booking" className="btn btn-outline" onClick={onClose}>Buy a Gift Card</Link>
+                        <Link to="/gift-cards" className="btn btn-outline" onClick={onClose}>Buy a Gift Card</Link>
                     </div>
                 </div>
             </div>

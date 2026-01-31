@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import { heroImg } from '../assets/images';
-import { homeServices, stats, mediaFeatures } from '../data';
+import { homeServices, stats } from '../data';
 import AnimatedCounter from '../components/AnimatedCounter';
 import PackagesSection from '../components/PackagesSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import PhilosophySection from '../components/PhilosophySection';
-import TherapistsSection from '../components/TherapistsSection';
-import FAQSection from '../components/FAQSection';
+
 import { JSX } from 'react';
 
 export default function Home(): JSX.Element {
@@ -22,8 +20,8 @@ export default function Home(): JSX.Element {
                 <div className="container">
                     <div className="hero-content">
                         <span className="hero-subtitle">Welcome to Serenity</span>
-                        <h1 className="hero-title">Experience Pure<br />Relaxation</h1>
-                        <p className="hero-text">Escape the everyday and immerse yourself in a world of tranquility. Our expert therapists combine ancient healing traditions with modern techniques to rejuvenate your body, mind, and soul.</p>
+                        <h1 className="hero-title">Your All-in-One Luxury<br />Wellness Destination</h1>
+                        <p className="hero-text">Escape the everyday and immerse yourself in an all-in-one sanctuary of tranquility. Our expert therapists combine ancient healing traditions with modern techniques to rejuvenate your body, mind, and soul.</p>
                         <div className="hero-buttons">
                             <Link to="/services" className="btn btn-secondary btn-lg">Explore Services</Link>
                             <Link to="/booking" className="btn btn-white btn-lg">Book Appointment</Link>
@@ -40,9 +38,9 @@ export default function Home(): JSX.Element {
             <section className="section" id="services">
                 <div className="container">
                     <SectionHeader
-                        subtitle="Our Expertise"
-                        title="Premium Spa Services"
-                        description="Discover our range of treatments designed to rejuvenate your body, mind, and soul."
+                        subtitle="What We Offer"
+                        title="Our Services"
+                        description="From relaxing massages to expert skincare and nail care, discover treatments designed for your complete wellness."
                     />
                     <div className="grid grid-4">
                         {homeServices.map((service, i) => (
@@ -51,7 +49,7 @@ export default function Home(): JSX.Element {
                                     <img src={service.img} alt={service.title} loading="lazy" />
                                 </div>
                                 <div className="service-card-overlay">
-                                    <div className="service-card-icon"><i className={`fas ${service.icon}`}></i></div>
+                                    <div className="service-card-icon"><ion-icon name={service.icon}></ion-icon></div>
                                     <h3 className="service-card-title">{service.title}</h3>
                                     <span className="service-card-price">From ${service.price}</span>
                                 </div>
@@ -61,7 +59,17 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <PhilosophySection />
+
+
+
+
+            {/* Packages Section */}
+            <PackagesSection />
+
+
+
+
+
 
             {/* Stats Section */}
             <section className="stats-section reveal">
@@ -83,13 +91,6 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <TherapistsSection />
-
-            {/* Packages Section */}
-            <PackagesSection />
-
-
-
             {/* Testimonials */}
             <section className="section testimonials" id="testimonials">
                 <div className="container">
@@ -98,17 +99,9 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <FAQSection />
 
-            {/* As Featured In */}
-            <section className="as-seen-on reveal">
-                <h4>As Featured In</h4>
-                <div className="media-logos">
-                    {mediaFeatures.map((name, i) => (
-                        <span key={i} className="media-logo"><i className="fas fa-newspaper"></i> {name}</span>
-                    ))}
-                </div>
-            </section>
+
+
 
 
 

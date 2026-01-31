@@ -1,5 +1,5 @@
 import { JSX, useState } from 'react';
-import { spaPackages } from '../data';
+import { spaPackages, membershipPackages } from '../data';
 import sageMarbleBgFinal from '../assets/images/sage_marble_giftcard_final.jpg';
 
 interface GiftCardAmount {
@@ -18,10 +18,10 @@ const presetAmounts: GiftCardAmount[] = [
 ];
 
 const giftCardFeatures = [
-    { icon: 'fa-infinity', title: 'Never Expires', desc: 'Use it whenever you\'re ready to relax' },
-    { icon: 'fa-gift', title: 'Instant Delivery', desc: 'Digital cards delivered immediately via email' },
-    { icon: 'fa-palette', title: 'Personalized', desc: 'Add a custom message for that special someone' },
-    { icon: 'fa-spa', title: 'Any Service', desc: 'Redeemable for all spa treatments and packages' },
+    { icon: 'infinite-outline', title: 'Never Expires', desc: 'Use it whenever you\'re ready to relax' },
+    { icon: 'gift-outline', title: 'Instant Delivery', desc: 'Digital cards delivered immediately via email' },
+    { icon: 'color-palette-outline', title: 'Personalized', desc: 'Add a custom message for that special someone' },
+    { icon: 'flower-outline', title: 'Any Service', desc: 'Redeemable for all spa treatments and packages' },
 ];
 
 type CardType = 'amount' | 'package';
@@ -101,7 +101,7 @@ export default function GiftCards(): JSX.Element {
                                     color: 'white',
                                     fontSize: 'var(--text-xl)'
                                 }}>
-                                    <i className={`fas ${feature.icon}`}></i>
+                                    <ion-icon name={feature.icon}></ion-icon>
                                 </div>
                                 <h4 style={{
                                     marginBottom: 'var(--space-xs)',
@@ -192,19 +192,21 @@ export default function GiftCards(): JSX.Element {
                                             <>
                                                 <h3 style={{ marginBottom: 'var(--space-lg)' }}>Select a Package</h3>
                                                 <div className="package-options">
-                                                    {spaPackages.map((pkg) => (
+                                                    {membershipPackages.map((pkg) => (
                                                         <div
                                                             key={pkg.name}
                                                             className={`package-option ${selectedPackage === pkg.name ? 'active' : ''}`}
                                                             onClick={() => setSelectedPackage(pkg.name)}
                                                         >
-                                                            <div className="package-icon">{pkg.icon}</div>
+                                                            <div className="package-icon">
+                                                                <ion-icon name={pkg.icon}></ion-icon>
+                                                            </div>
                                                             <div className="package-info">
-                                                                <h4>{pkg.name} Package</h4>
+                                                                <h4>{pkg.name} Membership</h4>
                                                                 <p>{pkg.tagline}</p>
                                                             </div>
                                                             <div className="package-price">${pkg.price}</div>
-                                                            {pkg.featured && <span className="featured-tag">Best Value</span>}
+                                                            {pkg.featured && <span className="featured-tag">Most Popular</span>}
                                                         </div>
                                                     ))}
                                                 </div>

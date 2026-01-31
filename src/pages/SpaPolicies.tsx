@@ -9,7 +9,7 @@ interface PolicySection {
 
 const policies: PolicySection[] = [
     {
-        icon: 'fa-clock',
+        icon: 'time-outline',
         title: 'Appointment Policies',
         content: [
             'Please arrive 10-15 minutes before your scheduled appointment to allow time for check-in and preparation.',
@@ -19,7 +19,7 @@ const policies: PolicySection[] = [
         ]
     },
     {
-        icon: 'fa-calendar-times',
+        icon: 'calendar-outline',
         title: 'Cancellation Policy',
         content: [
             'Please provide at least 24 hours notice if you need to reschedule or cancel your appointment.',
@@ -30,7 +30,7 @@ const policies: PolicySection[] = [
         ]
     },
     {
-        icon: 'fa-heart-pulse',
+        icon: 'heart-outline',
         title: 'Health & Safety Guidelines',
         content: [
             'Please inform us of any health conditions, allergies, or medications before your treatment.',
@@ -41,7 +41,7 @@ const policies: PolicySection[] = [
         ]
     },
     {
-        icon: 'fa-spa',
+        icon: 'flower-outline',
         title: 'Treatment Guidelines',
         content: [
             'Communicate openly with your therapist about pressure, temperature, and comfort preferences.',
@@ -52,7 +52,7 @@ const policies: PolicySection[] = [
         ]
     },
     {
-        icon: 'fa-user-check',
+        icon: 'person-outline',
         title: 'Spa Etiquette',
         content: [
             'The spa is a sanctuary of peace. Please speak softly and turn off mobile phones.',
@@ -63,7 +63,7 @@ const policies: PolicySection[] = [
         ]
     },
     {
-        icon: 'fa-child',
+        icon: 'people-outline',
         title: 'Children & Age Policy',
         content: [
             'Guests must be 18 years or older to access spa facilities.',
@@ -127,7 +127,7 @@ export default function SpaPolicies(): JSX.Element {
                                         color: 'white',
                                         fontSize: 'var(--text-xl)'
                                     }}>
-                                        <i className={`fas ${policy.icon}`}></i>
+                                        <ion-icon name={policy.icon}></ion-icon>
                                     </div>
                                     <h3 style={{ margin: 0 }}>{policy.title}</h3>
                                 </div>
@@ -176,10 +176,10 @@ export default function SpaPolicies(): JSX.Element {
                     </p>
                     <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <Link to="/contact" className="btn btn-primary">
-                            <i className="fas fa-envelope"></i> Contact Us
+                            <ion-icon name="mail-outline"></ion-icon> Contact Us
                         </Link>
                         <Link to="/booking" className="btn btn-secondary">
-                            <i className="fas fa-calendar-check"></i> Book Now
+                            <ion-icon name="calendar-outline"></ion-icon> Book Now
                         </Link>
                     </div>
                 </div>
